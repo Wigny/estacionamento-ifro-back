@@ -1,4 +1,4 @@
-defmodule EstacionamentoIFRO.CorVeiculo do
+defmodule EstacionamentoIFRO.VeiculoCor do
   use Ecto.Schema
   import Ecto.Changeset
 
@@ -9,8 +9,8 @@ defmodule EstacionamentoIFRO.CorVeiculo do
   end
 
   @doc false
-  def changeset(cor_veiculo, attrs) do
-    cor_veiculo
+  def changeset(veiculo_cor, attrs) do
+    veiculo_cor
     |> cast(attrs, [:cor])
     |> validate_required([:cor])
   end

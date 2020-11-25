@@ -1,4 +1,4 @@
-defmodule EstacionamentoIFRO.EspecieVeiculo do
+defmodule EstacionamentoIFRO.VeiculoEspecie do
   use Ecto.Schema
   import Ecto.Changeset
 
@@ -9,8 +9,8 @@ defmodule EstacionamentoIFRO.EspecieVeiculo do
   end
 
   @doc false
-  def changeset(especie_veiculo, attrs) do
-    especie_veiculo
+  def changeset(veiculo_especie, attrs) do
+    veiculo_especie
     |> cast(attrs, [:especie])
     |> validate_required([:especie])
   end
