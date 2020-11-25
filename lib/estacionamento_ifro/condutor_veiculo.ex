@@ -1,10 +1,10 @@
-defmodule EstacionamentoIFRO.Conduz do
+defmodule EstacionamentoIFRO.CondutorVeiculo do
   use Ecto.Schema
   import Ecto.Changeset
 
-  schema "conduzem" do
-    field :conduz_ate, :naive_datetime
+  schema "condutor_veiculo" do
     field :conduz_desde, :naive_datetime
+    field :conduz_ate, :naive_datetime
     field :condutor_id, :id
     field :veiculo_id, :id
 
@@ -12,8 +12,8 @@ defmodule EstacionamentoIFRO.Conduz do
   end
 
   @doc false
-  def changeset(conduz, attrs) do
-    conduz
+  def changeset(condutor_veiculo, attrs) do
+    condutor_veiculo
     |> cast(attrs, [:conduz_desde, :conduz_ate])
     |> validate_required([:conduz_desde, :conduz_ate])
   end

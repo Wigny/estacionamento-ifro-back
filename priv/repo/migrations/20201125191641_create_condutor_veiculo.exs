@@ -1,8 +1,8 @@
-defmodule EstacionamentoIFRO.Repo.Migrations.CreateConduzem do
+defmodule EstacionamentoIFRO.Repo.Migrations.CreateCondutorVeiculo do
   use Ecto.Migration
 
   def change do
-    create table(:conduzem) do
+    create table(:condutor_veiculo) do
       add :conduz_desde, :naive_datetime
       add :conduz_ate, :naive_datetime
       add :condutor_id, references(:condutores, on_delete: :nothing)
@@ -11,7 +11,7 @@ defmodule EstacionamentoIFRO.Repo.Migrations.CreateConduzem do
       timestamps()
     end
 
-    create index(:conduzem, [:condutor_id])
-    create index(:conduzem, [:veiculo_id])
+    create index(:condutor_veiculo, [:condutor_id])
+    create index(:condutor_veiculo, [:veiculo_id])
   end
 end
