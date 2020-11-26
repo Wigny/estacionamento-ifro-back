@@ -1,11 +1,11 @@
-defmodule EstacionamentoIFRO.Registro do
+defmodule EstacionamentoIFRO.Registros.Registro do
   use Ecto.Schema
   import Ecto.Changeset
 
   schema "registros" do
     field :entrada, :naive_datetime
     field :saida, :naive_datetime
-    field :condutor_veiculo_id, :id
+    field :veiculo_condutor_id, :id
 
     timestamps()
   end

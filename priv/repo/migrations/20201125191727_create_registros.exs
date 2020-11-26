@@ -5,11 +5,11 @@ defmodule EstacionamentoIFRO.Repo.Migrations.CreateRegistros do
     create table(:registros) do
       add :entrada, :naive_datetime
       add :saida, :naive_datetime
-      add :condutor_veiculo_id, references(:condutor_veiculo, on_delete: :nothing)
+      add :veiculo_condutor_id, references(:veiculos_condutores, on_delete: :nothing)
 
       timestamps()
     end
 
-    create index(:registros, [:condutor_veiculo_id])
+    create index(:registros, [:veiculo_condutor_id])
   end
 end
