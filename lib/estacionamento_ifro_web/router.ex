@@ -7,6 +7,8 @@ defmodule EstacionamentoIFROWeb.Router do
 
   scope "/api", EstacionamentoIFROWeb do
     pipe_through :api
+
+    resources "/condutores", CondutorController, only: [:create]
   end
 
   # Enables LiveDashboard only for development
