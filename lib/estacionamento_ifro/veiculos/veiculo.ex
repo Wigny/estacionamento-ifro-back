@@ -1,4 +1,4 @@
-defmodule EstacionamentoIFRO.Veiculo do
+defmodule EstacionamentoIFRO.Veiculos.Veiculo do
   use Ecto.Schema
   import Ecto.Changeset
 
