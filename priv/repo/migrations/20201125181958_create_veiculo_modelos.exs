@@ -9,6 +9,7 @@ defmodule EstacionamentoIFRO.Repo.Migrations.CreateVeiculoModelos do
       timestamps()
     end
 
+    create unique_index(:veiculo_modelos, [:modelo])
     create index(:veiculo_modelos, [:marca_id])
   end
 end
