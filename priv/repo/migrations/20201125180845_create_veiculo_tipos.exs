@@ -3,10 +3,12 @@ defmodule EstacionamentoIFRO.Repo.Migrations.CreateVeiculoTipos do
 
   def change do
     create table(:veiculo_tipos) do
-      add(:tipo, :string)
+      add :tipo, :string
 
       timestamps()
     end
+
+    create unique_index(:veiculo_tipos, [:tipo])
 
     execute(fn ->
       repo().insert_all("veiculo_tipos", [

@@ -1,4 +1,4 @@
-defmodule EstacionamentoIFRO.VeiculoTipo do
+defmodule EstacionamentoIFRO.Veiculos.Tipo do
   use Ecto.Schema
   import Ecto.Changeset
 
@@ -9,9 +9,10 @@ defmodule EstacionamentoIFRO.VeiculoTipo do
   end
 
   @doc false
-  def changeset(veiculo_tipo, attrs) do
-    veiculo_tipo
+  def changeset(tipo, attrs) do
+    tipo
     |> cast(attrs, [:tipo])
     |> validate_required([:tipo])
+    |> unique_constraint(:tipo)
   end
 end
