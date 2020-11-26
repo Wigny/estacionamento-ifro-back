@@ -6,8 +6,18 @@ defmodule EstacionamentoIFRO.CondutoresTest do
   describe "condutores" do
     alias EstacionamentoIFRO.Condutores.Condutor
 
-    @valid_attrs %{cpf_cnpj: "some cpf_cnpj", nascimento: ~D[2010-04-17], nome: "some nome", telefone: "some telefone"}
-    @update_attrs %{cpf_cnpj: "some updated cpf_cnpj", nascimento: ~D[2011-05-18], nome: "some updated nome", telefone: "some updated telefone"}
+    @valid_attrs %{
+      cpf_cnpj: "some cpf_cnpj",
+      nascimento: ~D[2010-04-17],
+      nome: "some nome",
+      telefone: "some telefone"
+    }
+    @update_attrs %{
+      cpf_cnpj: "some updated cpf_cnpj",
+      nascimento: ~D[2011-05-18],
+      nome: "some updated nome",
+      telefone: "some updated telefone"
+    }
     @invalid_attrs %{cpf_cnpj: nil, nascimento: nil, nome: nil, telefone: nil}
 
     def condutor_fixture(attrs \\ %{}) do

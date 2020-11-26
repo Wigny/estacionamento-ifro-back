@@ -30,32 +30,46 @@ defmodule EstacionamentoIFRO.VeiculosCondutoresTest do
     end
 
     test "create_veiculo_condutor/1 with valid data creates a veiculo_condutor" do
-      assert {:ok, %VeiculoCondutor{} = veiculo_condutor} = VeiculosCondutores.create_veiculo_condutor(@valid_attrs)
+      assert {:ok, %VeiculoCondutor{} = veiculo_condutor} =
+               VeiculosCondutores.create_veiculo_condutor(@valid_attrs)
+
       assert veiculo_condutor.conduz_ate == ~N[2010-04-17 14:00:00]
       assert veiculo_condutor.conduz_desde == ~N[2010-04-17 14:00:00]
     end
 
     test "create_veiculo_condutor/1 with invalid data returns error changeset" do
-      assert {:error, %Ecto.Changeset{}} = VeiculosCondutores.create_veiculo_condutor(@invalid_attrs)
+      assert {:error, %Ecto.Changeset{}} =
+               VeiculosCondutores.create_veiculo_condutor(@invalid_attrs)
     end
 
     test "update_veiculo_condutor/2 with valid data updates the veiculo_condutor" do
       veiculo_condutor = veiculo_condutor_fixture()
-      assert {:ok, %VeiculoCondutor{} = veiculo_condutor} = VeiculosCondutores.update_veiculo_condutor(veiculo_condutor, @update_attrs)
+
+      assert {:ok, %VeiculoCondutor{} = veiculo_condutor} =
+               VeiculosCondutores.update_veiculo_condutor(veiculo_condutor, @update_attrs)
+
       assert veiculo_condutor.conduz_ate == ~N[2011-05-18 15:01:01]
       assert veiculo_condutor.conduz_desde == ~N[2011-05-18 15:01:01]
     end
 
     test "update_veiculo_condutor/2 with invalid data returns error changeset" do
       veiculo_condutor = veiculo_condutor_fixture()
-      assert {:error, %Ecto.Changeset{}} = VeiculosCondutores.update_veiculo_condutor(veiculo_condutor, @invalid_attrs)
+
+      assert {:error, %Ecto.Changeset{}} =
+               VeiculosCondutores.update_veiculo_condutor(veiculo_condutor, @invalid_attrs)
+
       assert veiculo_condutor == VeiculosCondutores.get_veiculo_condutor!(veiculo_condutor.id)
     end
 
     test "delete_veiculo_condutor/1 deletes the veiculo_condutor" do
       veiculo_condutor = veiculo_condutor_fixture()
-      assert {:ok, %VeiculoCondutor{}} = VeiculosCondutores.delete_veiculo_condutor(veiculo_condutor)
-      assert_raise Ecto.NoResultsError, fn -> VeiculosCondutores.get_veiculo_condutor!(veiculo_condutor.id) end
+
+      assert {:ok, %VeiculoCondutor{}} =
+               VeiculosCondutores.delete_veiculo_condutor(veiculo_condutor)
+
+      assert_raise Ecto.NoResultsError, fn ->
+        VeiculosCondutores.get_veiculo_condutor!(veiculo_condutor.id)
+      end
     end
 
     test "change_veiculo_condutor/1 returns a veiculo_condutor changeset" do
