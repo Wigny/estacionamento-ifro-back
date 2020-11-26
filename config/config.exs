@@ -14,10 +14,10 @@ config :estacionamento_ifro,
 # Configures the endpoint
 config :estacionamento_ifro, EstacionamentoIFROWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "o7TlGpGSDBjjG9fKxuFpgMfqENn3K5CcgUTu1T7hwwLO8GVX1m7jOJ3wUiGSoV2l",
+  secret_key_base: "T0vAifQn+j27JvwPXfm3IGE0xwx6P95YC5PdgaJ5HCZEknxzGLU52Gai5EI9aD2b",
   render_errors: [view: EstacionamentoIFROWeb.ErrorView, accepts: ~w(json), layout: false],
   pubsub_server: EstacionamentoIFRO.PubSub,
-  live_view: [signing_salt: "BVY00Y/I"]
+  live_view: [signing_salt: "Dfq3qbb0"]
 
 # Configures Elixir's Logger
 config :logger, :console,

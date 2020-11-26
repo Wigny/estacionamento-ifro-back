@@ -7,7 +7,7 @@ defmodule EstacionamentoIFROWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_estacionamento_ifro_key",
-    signing_salt: "UoVIm/5I"
+    signing_salt: "egXZkY+N"
   ]
 
   socket "/socket", EstacionamentoIFROWeb.UserSocket,

@@ -22,7 +22,6 @@ defmodule EstacionamentoIFROWeb do
       use Phoenix.Controller, namespace: EstacionamentoIFROWeb
 
       import Plug.Conn
-      import EstacionamentoIFROWeb.Gettext
       alias EstacionamentoIFROWeb.Router.Helpers, as: Routes
     end
   end
@@ -54,7 +53,6 @@ defmodule EstacionamentoIFROWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import EstacionamentoIFROWeb.Gettext
     end
   end
 
@@ -64,7 +62,6 @@ defmodule EstacionamentoIFROWeb do
       import Phoenix.View
 
       import EstacionamentoIFROWeb.ErrorHelpers
-      import EstacionamentoIFROWeb.Gettext
       alias EstacionamentoIFROWeb.Router.Helpers, as: Routes
     end
   end
