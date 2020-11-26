@@ -8,6 +8,8 @@ defmodule EstacionamentoIFRO.Repo.Migrations.CreateVeiculoCores do
       timestamps()
     end
 
+    create unique_index(:veiculo_cores, [:cor])
+
     execute(fn ->
       repo().insert_all("veiculo_cores", [
         %{cor: "Amarelo", inserted_at: DateTime.utc_now(), updated_at: DateTime.utc_now()},
