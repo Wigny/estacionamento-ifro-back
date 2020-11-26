@@ -8,6 +8,8 @@ defmodule EstacionamentoIFRO.Repo.Migrations.CreateVeiculoEspecies do
       timestamps()
     end
 
+    create unique_index(:veiculo_especies, [:especie])
+
     execute(fn ->
       repo().insert_all("veiculo_especies", [
         %{
