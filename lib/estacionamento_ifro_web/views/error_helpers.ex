@@ -3,6 +3,10 @@ defmodule EstacionamentoIFROWeb.ErrorHelpers do
   Conveniences for translating and building error messages.
   """
 
+  alias Ecto.Changeset
+  alias Phoenix.Controller
+  alias Plug.Conn
+
   @doc """
   Translates an error message.
   """
@@ -12,5 +16,13 @@ defmodule EstacionamentoIFROWeb.ErrorHelpers do
     Enum.reduce(opts, msg, fn {key, value}, acc ->
       String.replace(acc, "%{#{key}}", to_string(value))
     end)
+  end
+
+  def errors(conn, changeset) do
+    errors = Changeset.traverse_errors(changeset, &translate_error/1)
+
+    conn
+    |> Conn.put_status(:expectation_failed)
+    |> Controller.json(errors)
   end
 end

@@ -2,6 +2,7 @@ defmodule EstacionamentoIFRO.Condutores.Condutor do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @derive {Jason.Encoder, except: [:__meta__, :__struct__]}
   schema "condutores" do
     field :cpf_cnpj, :string
     field :nascimento, :date
