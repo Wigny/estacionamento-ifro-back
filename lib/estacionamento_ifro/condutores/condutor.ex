@@ -1,4 +1,4 @@
-defmodule EstacionamentoIFRO.Condutor do
+defmodule EstacionamentoIFRO.Condutores.Condutor do
   use Ecto.Schema
   import Ecto.Changeset
 
