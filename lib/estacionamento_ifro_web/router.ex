@@ -8,7 +8,14 @@ defmodule EstacionamentoIFROWeb.Router do
   scope "/api", EstacionamentoIFROWeb do
     pipe_through :api
 
-    resources "/veiculos/cores", VeiculoCorController, only: [:index]
+    get "/veiculos/cores", VeiculoController, :get_cores
+    get "/veiculos/tipos", VeiculoController, :get_tipos
+    get "/veiculos/especies", VeiculoController, :get_especies
+    get "/veiculos/marcas", VeiculoController, :get_marcas
+    post "/veiculos/marcas", VeiculoController, :insert_marcas
+    get "/veiculos/modelos", VeiculoController, :get_modelos
+    post "/veiculos/modelos", VeiculoController, :insert_modelos
+
     resources "/condutores", CondutorController, only: [:create]
   end
 

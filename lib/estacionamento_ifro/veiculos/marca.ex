@@ -2,6 +2,7 @@ defmodule EstacionamentoIFRO.Veiculos.Marca do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @derive {Jason.Encoder, only: [:id, :marca]}
   schema "veiculo_marcas" do
     field :marca, :string
 
