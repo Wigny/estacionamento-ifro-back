@@ -2,12 +2,11 @@ use Mix.Config
 
 # Configure your database
 config :estacionamento_ifro, EstacionamentoIFRO.Repo,
-  # url:
-  # "postgres://uvxnxivmdcevpu:d31a0d5a27c9cd96ec77259a812d048ea5b61d07048ec4fef90daa08270c1818@ec2-52-206-15-227.compute-1.amazonaws.com:5432/d8cu6isla3lhqj?sslmode=require",
-  username: "uvxnxivmdcevpu",
-  password: "d31a0d5a27c9cd96ec77259a812d048ea5b61d07048ec4fef90daa08270c1818",
-  database: "d8cu6isla3lhqj",
-  hostname: "ec2-52-206-15-227.compute-1.amazonaws.com",
+  # url: "postgres://postgres:postgres@localhost:5432/estacionamento_ifro_dev?sslmode=require"
+  username: "postgres",
+  password: "postgres",
+  database: "estacionamento_ifro_dev",
+  hostname: "localhost",
   port: 5432,
   ssl: true,
   show_sensitive_data_on_connection_error: true,
