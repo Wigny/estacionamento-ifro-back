@@ -1,8 +1,8 @@
 version: "3"
 services:
   web:
-    build: .
     image: elixir
     volumes:
       - .:/code
-    working_dir: "/code"
+    working_dir: /code
+    command: mix phx.server
