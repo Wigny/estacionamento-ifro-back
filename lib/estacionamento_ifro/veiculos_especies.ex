@@ -1,4 +1,4 @@
-defmodule EstacionamentoIFRO.Veiculo.Especies do
+defmodule EstacionamentoIFRO.Veiculos.Especies do
   @moduledoc """
   The Veiculos context.
   """

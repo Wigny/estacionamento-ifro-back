@@ -5,7 +5,7 @@ defmodule EstacionamentoIFRO.Registros.Registro do
   schema "registros" do
     field :entrada, :naive_datetime
     field :saida, :naive_datetime
-    field :veiculo_condutor_id, :id
+    belongs_to :veiculo_condutor, EstacionamentoIFRO.VeiculosCondutores.VeiculoCondutor
 
     timestamps()
   end
@@ -14,6 +14,6 @@ defmodule EstacionamentoIFRO.Registros.Registro do
   def changeset(registro, attrs) do
     registro
     |> cast(attrs, [:entrada, :saida])
-    |> validate_required([:entrada, :saida])
+    |> validate_required([:entrada])
   end
 end

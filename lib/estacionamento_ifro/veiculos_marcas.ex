@@ -1,4 +1,4 @@
-defmodule EstacionamentoIFRO.Veiculo.Marcas do
+defmodule EstacionamentoIFRO.Veiculos.Marcas do
   @moduledoc """
   The Veiculos context.
   """

@@ -2,7 +2,7 @@ defmodule EstacionamentoIFRO.Veiculos.Tipo do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @derive {Jason.Encoder, only: [:id, :tipo]}
+  @derive {Jason.Encoder, except: [:__meta__, :__struct__]}
   schema "veiculo_tipos" do
     field :tipo, :string
 

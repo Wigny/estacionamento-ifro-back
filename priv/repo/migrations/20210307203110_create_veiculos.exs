@@ -3,7 +3,7 @@ defmodule EstacionamentoIFRO.Repo.Migrations.CreateVeiculos do
 
   def change do
     create table(:veiculos) do
-      add :ano, :string
+      add :ano, :integer
       add :placa, :string
       add :tipo_id, references(:veiculo_tipos, on_delete: :nothing)
       add :especie_id, references(:veiculo_especies, on_delete: :nothing)

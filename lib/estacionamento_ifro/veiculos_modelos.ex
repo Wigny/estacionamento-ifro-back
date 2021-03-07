@@ -1,4 +1,4 @@
-defmodule EstacionamentoIFRO.Veiculo.Modelos do
+defmodule EstacionamentoIFRO.Veiculos.Modelos do
   @moduledoc """
   The Veiculos context.
   """
@@ -17,11 +17,8 @@ defmodule EstacionamentoIFRO.Veiculo.Modelos do
       [%Modelo{}, ...]
 
   """
-  def list_veiculo_modelos(marca) do
-    Modelo
-    |> where(marca_id: ^marca)
-    |> preload(:marca)
-    |> Repo.all()
+  def list_veiculo_modelos do
+    Repo.all(Modelo)
   end
 
   @doc """
@@ -52,8 +49,8 @@ defmodule EstacionamentoIFRO.Veiculo.Modelos do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_modelo(marca, attrs \\ %{}) do
-    %Modelo{marca: marca}
+  def create_modelo(attrs \\ %{}) do
+    %Modelo{}
     |> Modelo.changeset(attrs)
     |> Repo.insert()
   end

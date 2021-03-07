@@ -2,7 +2,7 @@ defmodule EstacionamentoIFRO.Veiculos.Cor do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @derive {Jason.Encoder, only: [:id, :cor]}
+  @derive {Jason.Encoder, except: [:__meta__, :__struct__]}
   schema "veiculo_cores" do
     field :cor, :string
 

@@ -2,13 +2,10 @@ use Mix.Config
 
 # Configure your database
 config :estacionamento_ifro, EstacionamentoIFRO.Repo,
-  # url: "postgres://postgres:postgres@localhost:5432/estacionamento_ifro_dev?sslmode=require"
   username: "postgres",
   password: "postgres",
-  database: "estacionamento_ifro_dev",
+  database: "estacionamento_ifro",
   hostname: "localhost",
-  port: 5432,
-  ssl: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
